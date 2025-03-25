@@ -1,1 +1,1 @@
-// db.js - Connects to MongoDB database using Mongoose
+// db.js - Connects to MongoDB database using Mongoose i
