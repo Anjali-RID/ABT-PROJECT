@@ -1,4 +1,4 @@
-// userModel.js - Defines the Mongoose schema for storing user information
+// userModel.js - Defines the Mongoose schema for storing user information ,
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 
