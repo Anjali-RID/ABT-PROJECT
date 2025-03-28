@@ -1,6 +1,6 @@
 // userRoutes.js - Defines API routes for user actions (GET /profile, POST /register)
 import express from "express";
-import { userEx } from "../middleware/userEx.js";
+//import {userEx} from '../Middleware/userEx.js'
 import { userSignup ,userLogin} from "../controllers/userControl.js";
 import { verifyToken } from "../middleware/token.js";
 
