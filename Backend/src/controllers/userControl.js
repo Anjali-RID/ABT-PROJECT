@@ -1,7 +1,7 @@
 // userController.js - Handles user-related operations (login, register, profile update)
 import UserModel from "../models/userModel.js";
 import { passwordHash ,verifyPassword} from "../utils/passwordBcrypt.js";
-//import { getToken } from "../middleware/token.js";
+import { getToken } from "../middleware/token.js";
 
 export const userSignup = async (req, res) => {
     try {
