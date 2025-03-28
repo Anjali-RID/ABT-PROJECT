@@ -4,7 +4,7 @@ export const userEx = async (req, res, next) => {
     const { email, password, name, number, role } = req.body;
 
     try {
-        // ✅ Ensure at least one of `email` or `number` is provided
+        // ✅ Ensure at least one of `email` or `number` is provided m
         if (!email && !number) {
             return res.status(400).json({ message: "Either email or phone number is required." });
         }
