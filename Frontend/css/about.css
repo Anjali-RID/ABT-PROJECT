@@ -5,100 +5,6 @@ body {
     background-color: #FCF5EB;
 }
 
-/* Navbar Links */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-a {
-    position: relative;
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    transition: color 0.3s ease-in-out;
-}
-
-a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 100%;
-    height: 2px;
-    background: #DB6812;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-}
-
-a:hover {
-    color: #DB6812;
-}
-
-a:hover::after {
-    transform: scaleX(1);
-}
-
-/* Connect Button */
-.connect-btn {
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    color: #E65100;
-    position: relative;
-    padding: 5px 10px;
-    display: inline-block;
-}
-
-.connect-btn::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #E65100;
-    transition: width 0.3s ease-in-out;
-    position: absolute;
-    bottom: -3px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.connect-btn:hover::after {
-    width: 100%;
-}
-
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 5%;
-    background: white;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-
-nav ul li a.active {
-    color: orange;
-}
-
 /* Hero Section */
 .hero {
     position: relative;
@@ -121,7 +27,10 @@ nav ul li a.active {
     color: white;
     text-align: center;
 }
-
+.title{
+    text-align: center;
+    margin-top: 15px;
+}
 /* Events Section */
 .events-container {
     display: flex;
@@ -484,24 +393,87 @@ footer {
     transform: scale(1.05);
 }
 /* Responsive Design */
+/* Ensure text and images scale properly on smaller screens */
+@media (max-width: 1024px) {
+    .hero-content {
+        width: 80%;
+    }
+
+    .event-card {
+        width: 90%;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Adjust layouts for tablets */
 @media (max-width: 768px) {
-    .footer-center{
+    .hero {
+        height: 280px;
+    }
+
+    .hero-content h1 {
+        font-size: 5vw; /* Scales with viewport */
+    }
+
+    .events-container {
         flex-direction: column;
         align-items: center;
     }
 
-    .about-container, 
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
+    .event-card {
+        width: 100%;
     }
 
     .career-journey {
         grid-template-columns: 1fr;
     }
 
-    .footer-left, .footer-center, .footer-right {
+    .gallery-content img,
+    .videos iframe {
         width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
         text-align: center;
+    }
+
+    .footer-left img {
+        width: 100px;
+    }
+}
+
+/* Mobile Optimization */
+@media (max-width: 480px) {
+    .hero {
+        height: 220px;
+    }
+
+    .hero-content {
+        width: 90%;
+    }
+
+    .hero-content h1 {
+        font-size: 6vw;
+    }
+
+    .about-content h2 {
+        font-size: 5vw;
+    }
+
+    .footer-left img {
+        width: 80px;
+    }
+
+    .footer-right p {
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        font-size: 14px;
     }
 }
