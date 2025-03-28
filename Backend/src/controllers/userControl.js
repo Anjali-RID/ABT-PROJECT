@@ -5,7 +5,7 @@ import { getToken } from "../middleware/token.js";
 
 export const userSignup = async (req, res) => {
     try {
-        // Hash the password
+        // Hash the password p
         const hashedPassword = await passwordHash(req.body.password);
         
 
