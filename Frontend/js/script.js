@@ -40,3 +40,20 @@ function signin1(){
 function singup1(){
     signin();
 }
+
+function ContinueSingIn(){
+    username=document.getElementById("email").value;
+    password=document.getElementById("Password").value;
+    console.log("Username:-",username);
+    console.log("Password:-",password);
+}
+
+function ContinueSingUp(){
+    mobile=document.getElementById("Mobile").value;
+    email=document.getElementById("email_r").value;
+    createpassword=document.getElementById("Passwordc").value;
+    console.log("Mobile Number:-",mobile);
+    console.log("Email ID:-",email);
+    console.log("Create Password:-",createpassword);
+
+}
