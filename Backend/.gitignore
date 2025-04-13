@@ -1,1 +1,4 @@
 # .gitignore - Lists files and folders that should not be committed to Git
+
+node_modules/
+.env
